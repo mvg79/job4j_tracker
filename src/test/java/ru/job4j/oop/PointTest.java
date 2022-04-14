@@ -28,4 +28,12 @@ public class PointTest extends TestCase {
         double expected = 10;
         assertEquals(expected, a.distance(b), 0.01);
     }
+
+    @Test
+    public void testWhen000to222then3dot46() {
+        Point c = new Point(0, 0, 0);
+        Point d = new Point(2, 2, 2);
+        double expected = 3.46;
+        assertEquals(expected, c.distance3d(d), 0.01);
+    }
 }
