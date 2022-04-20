@@ -19,13 +19,11 @@ public class Matches {
             } else {
                 System.out.println("Ошибка! Введите повторно.");
             }
-            if (count == 0) {
                 if (!turn) {
                     System.out.println("Выиграл первый игрок");
                 } else {
                     System.out.println("Выиграл второй игрок");
                 }
-            }
         }
     }
 }
