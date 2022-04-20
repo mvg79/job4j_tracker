@@ -26,15 +26,6 @@ public class Item {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Item{"
-                + "created=" + created.format(FORMATTER)
-                + ", id=" + id
-                + ", name='" + name + '\''
-                + '}';
-    }
-
     public LocalDateTime getCreated() {
         return created;
     }
@@ -53,5 +44,14 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{"
+                + "created=" + created.format(FORMATTER)
+                + ", id=" + id
+                + ", name='" + name + '\''
+                + '}';
     }
 }
