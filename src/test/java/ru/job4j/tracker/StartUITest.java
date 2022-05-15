@@ -20,7 +20,6 @@ public class StartUITest {
         UserAction[] actions = {
                 new ExitAction()
         };
-        //new StartUI(out).init(in, tracker, actions);
         new StartUI(out).init(in, tracker, Arrays.asList(actions));
         assertThat(out.toString(), is(
                 "Menu." + System.lineSeparator()
