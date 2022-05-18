@@ -10,6 +10,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class ItemDescByNameTest {
+
     @Test
     public void sortDesc() {
         List<Item> items = Arrays.asList(
