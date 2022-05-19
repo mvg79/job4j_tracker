@@ -22,7 +22,7 @@ public class JobTest {
     public void whenCompatorAscByNameAndAscPrority() {
         Comparator<Job> cmpAscNamePriority = new JobAscByName().thenComparing(new JobAscByPriority());
         int rsl = cmpAscNamePriority.compare(
-                new Job("Ñontinuation prog", 0),
+                new Job("Resume program", 0),
                 new Job("Finish all", 1)
         );
         assertThat(rsl, greaterThan(0));
@@ -35,7 +35,7 @@ public class JobTest {
                 new Job("Going back", 0),
                 new Job("Start again", 1)
         );
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 
     @Test
