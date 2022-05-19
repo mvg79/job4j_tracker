@@ -35,7 +35,7 @@ public class JobTest {
                 new Job("Going back", 0),
                 new Job("Start again", 1)
         );
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 
     @Test
