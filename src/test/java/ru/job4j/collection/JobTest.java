@@ -22,8 +22,8 @@ public class JobTest {
     public void whenCompatorAscByNameAndAscPrority() {
         Comparator<Job> cmpAscNamePriority = new JobAscByName().thenComparing(new JobAscByPriority());
         int rsl = cmpAscNamePriority.compare(
-                new Job("Impl task", 0),
-                new Job("Fix bug", 1)
+                new Job("Ñontinuation prog", 0),
+                new Job("Finish all", 1)
         );
         assertThat(rsl, greaterThan(0));
     }
@@ -32,8 +32,8 @@ public class JobTest {
     public void whenCompatorDescByNameAndAscPrority() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobAscByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Impl task", 0),
-                new Job("Fix bug", 1)
+                new Job("Going back", 0),
+                new Job("Start again", 1)
         );
         assertThat(rsl, lessThan(0));
     }
