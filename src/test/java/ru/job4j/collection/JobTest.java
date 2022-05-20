@@ -32,10 +32,10 @@ public class JobTest {
     public void whenCompatorDescByNameAndAscPrority() {
         Comparator<Job> cmpNamePriority = new JobDescByName().thenComparing(new JobAscByPriority());
         int rsl = cmpNamePriority.compare(
-                new Job("Going back", 0),
-                new Job("Going back", 1)
+                new Job("Going back", 1),
+                new Job("Going back", 0)
         );
-        assertThat(rsl, lessThan(0));
+        assertThat(rsl, greaterThan(0));
     }
 
     @Test
