@@ -7,6 +7,10 @@ public class Student {
 
     private String surname;
 
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
     public Student(int score, String surname) {
         this.score = score;
         this.surname = surname;
@@ -30,7 +34,7 @@ public class Student {
         }
         Student student = (Student) o;
         return score == student.score
-                && Objects.equals(surname, student.surname);
+                && surname.equals(student.surname);
     }
 
     @Override
